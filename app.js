@@ -21,5 +21,8 @@ app.post('/notify', function (req, res) {
     res.send('What is up ');
 });
 app.get('/test', function(req, res){
-    res.send('I\'m Readyy.');
+    let channel = 'vehicle_notifier';
+    let body = req.body;
+    io.sockets.emit(`${channel}`, {vehicle: {id: '5'}});
+    res.send('What is up ');
 });
