@@ -11,7 +11,7 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
-server.listen(portName, function () {
+server.listen(process.env.PORT || 4000, function () {
     console.log(`listen to port ${portName}`)
 });
 app.post('/notify', function (req, res) {
