@@ -20,3 +20,6 @@ app.post('/notify', function (req, res) {
     io.sockets.emit(`${channel}`, body);
     res.send('What is up ');
 });
+app.get('/test', function(req, res){
+    res.send('I\'m Readyy.');
+});
