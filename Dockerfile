@@ -1,9 +1,7 @@
 FROM node:7.7.2-alpine
 
-WORKDIR /alten-realtime
+WORKDIR /realtime_code
 
-COPY package.json .
+COPY . /realtime_code
 RUN npm install --quiet
 
-COPY . .
-CMD ["npm", "start"]

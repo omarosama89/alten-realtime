@@ -23,3 +23,7 @@ app.post('/notify', function (req, res) {
 app.get('/test', function(req, res){
     res.send('Realtimeserver is up and running.');
 });
+
+io.on('connection', function (socket) {
+    console.log('user connect');
+});
